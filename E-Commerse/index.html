@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessories</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- POP UP -->
+
+
+    <div class="pop"> 
+      <p>Your Product is Added to Cart... <br>Check Once😊..</p>
+      <button onclick="hide()" class="btn btn-outline-danger">Close</button>
+    </div>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">StyleNext Accessories</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-expanded="false"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Products">View-Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <div class="box">
+              <p id="cart-icon" class="nav-link">Cart-<i class="fa-solid fa-cart-shopping"></i></p>
+              <div class="cart-count">0</div>
+              </div>
+            </li>
+          </ul>
+          <a id="lin" href="./signin.html"><button id="butn" class="btn p-2 my-lg-0 my-2">Sign In</button></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cart -->
+
+    <div class="cart">
+      <div class="carttitle">Cart Items</div>
+        <div class="cart-content">
+          <!-- <div class="cart-box">
+            <img  src="./airbud-1.webp" class="cart-img">
+            <div class="detail-box">
+               <div class="item-title">Airbud</div>
+            <div class="price-box">
+              <div class="cart-price">Rs.199</div>
+              <div class="cart-amt">Rs.400</div>
+            </div>
+            <input type="number" value="1" class="cart-quantity">
+          </div>
+          <i class="fa-solid fa-trash" id="trash"></i>
+        </div> -->
+
+        </div>
+        <div class="total">
+          <div class="totaltitle">Total</div>
+          <div class="totalprice">Rs.0</div>
+        </div>
+        <button class="btn-buy">Place Order</button>
+        <i id="cancel" class="fa-solid fa-xmark" ></i>
+    </div>
+
+
+    <!-- Home -->
+    <section id="Home">
+      <h1>BRANDED ACCESSORIES</h1>
+      <p>Enhance your Style with our Trendy and Elegant Accessories</p>
+    </section>
+
+    <!-- Products -->
+    <section id="Products">
+      <nav class="navbar bg-body-tertiary" id="pro">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5">Products</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-5" id="search" type="search" placeholder="Search" aria-label="Search"/>
+    </form>
+  </div>
+</nav>
+
+      <div class="row my-5 justify-content-center product-slide-item">
+
+      <div class="card mx-3" data-item="boatairpods300" style="width: 18rem">
+        <img src="airbud-1.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Boat Airpodes 300 </h5>
+          <p class="mp">M.R.P: <del>2,499</del> <mark>(52% off)</mark></p>
+          <p class="price">&#8377;1199 </p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="boatrokerz" style="width: 18rem">
+        <img src="./headset-2.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Boat Rockerz </h5>
+          <p class="mp">M.R.P: <del>2,999</del> <mark>(30% off)</mark></p>
+          <p class="price">&#8377;2099 </p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="noisebudex2" style="width: 18rem">
+        <img src="./airbud-2.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Noise Bude X2 </h5>
+          <p class="mp">M.R.P: <del>1,297</del> <mark>(23% off)</mark></p>
+          <p class="price">&#8377;999 </p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="hph300" style="width: 18rem">
+        <img src="./headset-1.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">HP H300 </h5>
+          <p class="mp">M.R.P: <del>2,776</del> <mark>(37% off)</mark></p>
+          <p class="price">&#8377;1749 </p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+
+
+        <div class="row my-5 justify-content-center product-slide-item">
+
+      <div class="card mx-3" data-item="portronicsluxcellpowerbank" style="width: 18rem">
+        <img src="./pcable.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Portronics Luxcell </h5>
+          <p class="mp">M.R.P: <del>3,772</del> <mark>(47% off)</mark></p>
+          <p class="price">&#8377;1999 </p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="wayonausb" style="width: 18rem">
+        <img src="./cable.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Wayona USB </h5>
+          <p class="mp">M.R.P: <del>532</del> <mark>(72% off)</mark></p>
+          <p class="price">&#8377;149 </p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="ptrondynamopowerbank" style="width: 18rem">
+        <img src="./powercable.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Ptron Dynamo </h5>
+          <p class="mp">M.R.P: <del>8,462</del> <mark>(74% off)</mark></p>
+          <p class="price">&#8377;2199 </p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="wayonactoctypec" style="width: 18rem">
+        <img src="./c to c.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Wayona C to C</h5>
+          <p class="mp">M.R.P: <del>592</del> <mark>(63% off)</mark></p>
+          <p class="price">&#8377;219</p>
+          <a href="#"   class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+        </div>
+
+
+        <div class="row my-5 justify-content-center product-slide-item">
+
+      <div class="card mx-3" data-item="ellersante23we" style="width: 18rem">
+        <img src="./charger-1.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Eller santé® 23we</h5>
+          <p class="mp">M.R.P: <del>4,999</del> <mark>(50% off)</mark></p>
+          <p class="price">&#8377;2498</p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="spigencharger" style="width: 18rem">
+        <img src="./charger-2.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Spigen Charger </h5>
+          <p class="mp">M.R.P: <del>1,399</del> <mark>(32% off)</mark></p>
+          <p class="price">&#8377;945</p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="zebronics2-in-1" style="width: 18rem">
+        <img src="./charger-3.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Zebronics 2-in-1 </h5>
+          <p class="mp">M.R.P: <del>3,999</del> <mark>(78% off)</mark></p>
+          <p class="price">&#8377;899</p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="wirelesspowerbank" style="width: 18rem">
+        <img src="./charger-4.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Wireless P-Bank </h5>
+          <p class="mp">M.R.P: <del>2,999</del> <mark>(57% off)</mark></p>
+          <p class="price">&#8377;1299</p>
+          <a href="#"   class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+        </div>
+
+
+        <div class="row mx-4 my-5 justify-content-center product-slide-item">
+
+      <div class="card mx-3" data-item="gamingcontroller" style="width: 18rem">
+        <img src="./jstick.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Gaming Controller </h5>
+          <p class="mp">M.R.P: <del>13,499</del> <mark>(36% off)</mark></p>
+          <p class="price">&#8377;8499 </p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="coolingpad" style="width: 18rem">
+        <img src="./coller.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Cooling Pad </h5>
+          <p class="mp">M.R.P: <del>2,999</del> <mark>(78% off)</mark></p>
+          <p class="price">&#8377;649</p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="trigger slives &" style="width: 18rem">
+        <img src="./slives.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title"> Trigger & Slives </h5>
+          <p class="mp">M.R.P: <del>324</del> <mark>(17% off)</mark></p>
+          <p class="price">&#8377;269</p>
+          <a href="#"  class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+      </div>
+      <div class="card mx-3" data-item="portronicstoad8mouse" style="width: 18rem">
+        <img src="./mouse.webp" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Portronics Toad 8 </h5>
+          <p class="mp">M.R.P: <del>1,499</del> <mark>(67% off)</mark></p>
+          <p class="price">&#8377;499</p>
+          <a href="#" class="btn btn-primary cartbtn">Add To Cart</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="About">
+      <div class="container-fluid my-3">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6 col-12">
+            <img src="./logo.png" id="logo" class="img-fluid d-block mx-auto" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-0">
+            <h1 id="abut">ACCESSORIES</h1>
+            <ul>
+              <li>
+                Mobile Accessories is your one-stop destination for elevating
+                your digital life.
+              </li>
+              <li>
+                We specialize in high-quality cases, chargers, cables, and audio
+                gear for all major mobile brands.
+              </li>
+              <li>
+                Our mission is to seamlessly blend style, protection, and
+                performance in every product we offer.
+              </li>
+              <li>
+                We focus on durability—selling products built to withstand the
+                rigors of daily use.
+              </li>
+              <li>
+                From minimalist clear cases to powerful portable chargers, we
+                cater to every user's need.
+              </li>
+              <li>
+                Customer satisfaction is our priority, backed by a hassle-free
+                return and warranty policy.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="input-group m-1">
+        <textarea
+          name="text"
+          class="form-control"
+          placeholder="Enter Your Experience"
+          id=""
+        ></textarea>
+        <button class="btn">SEND</button>
+      </div>
+    </section>
+    <footer>
+      <p>Copyrights @stylenextaccessories 2025</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</html>
